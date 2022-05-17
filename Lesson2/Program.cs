@@ -10,12 +10,12 @@ namespace Lesson2
     {
         static void Main(string[] args)
         {
-            //  lesson2Task1();
+              lesson2Task1();
             //  lesson2Task2();
             //  lesson2Task3();
             //  lesson2Task4();
             //  lesson2Task5();
-            lesson2Task6();
+            //  lesson2Task6();
         }
         static void lesson2Task1()
         {
@@ -145,13 +145,13 @@ namespace Lesson2
             switch (numberOfOffice)
             {
                 case 1:
-                    Console.WriteLine($" Workdays office {numberOfOffice} works {weekName.Tuesday | weekName.Wednesday | weekName.Saturday}");
+                    Console.WriteLine($" Office {numberOfOffice} works on  {Convert.ToString(weekName.Tuesday)} , {Convert.ToString(weekName.Wednesday)}");
                     break;
                 case 2:
-                    Console.WriteLine($"{numberOfOffice} works {weekName.Sunday | weekName.Wednesday | weekName.Saturday | weekName.Friday}");
+                    Console.WriteLine($" Office {numberOfOffice} works on  {Convert.ToString(weekName.Friday)} , {Convert.ToString(weekName.Monday)}");
                     break;
                 case 3:
-                    Console.WriteLine($"{numberOfOffice} works {weekName.Saturday | weekName.Friday | weekName.Saturday}");
+                    Console.WriteLine($" Office {numberOfOffice} works on  {Convert.ToString(weekName.Saturday)} , {Convert.ToString(weekName.Wednesday)}");
                     break;
                 default:
                     Console.WriteLine($"In our department we have not {numberOfOffice} office");
