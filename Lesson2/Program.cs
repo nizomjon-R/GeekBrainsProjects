@@ -11,12 +11,13 @@ namespace Lesson2
         static void Main(string[] args)
         {
             //  lesson2Task1();
-            //   lesson2Task2();
+            //  lesson2Task2();
             //  lesson2Task3();
             //  lesson2Task4();
-            lesson2Task5();
+            //  lesson2Task5();
+            lesson2Task6();
         }
-        public static void lesson2Task1()
+        static void lesson2Task1()
         {
             //Запросить у пользователя минимальную и максимальную температуру за сутки и вывести среднесуточную температуру.
 
@@ -37,7 +38,7 @@ namespace Lesson2
             }
             Console.ReadLine();
         }
-        public static void lesson2Task2()
+        static void lesson2Task2()
         {
             //Запросить у пользователя порядковый номер текущего месяца и вывести его название.
 
@@ -87,7 +88,7 @@ namespace Lesson2
             }
             Console.ReadLine();
         }
-        public static void lesson2Task3()
+        static void lesson2Task3()
         {
             //Определить, является ли введённое пользователем число чётным.
 
@@ -103,7 +104,7 @@ namespace Lesson2
             }
             Console.ReadLine();
         }
-        public static void lesson2Task4()
+        static void lesson2Task4()
         {
             string produktName = "Apple";
             double sumNDS = 377.10;
@@ -121,7 +122,7 @@ namespace Lesson2
 
 
         }
-        public static void lesson2Task5()
+        static void lesson2Task5()
         {
             Console.WriteLine("Type month of winter (December, January, Febrary)");
             string monthOfWinter = Console.ReadLine();
@@ -136,6 +137,31 @@ namespace Lesson2
                 Console.WriteLine("Wrong month or temperature");
             }
             Console.ReadLine();
+        }
+        static void lesson2Task6()
+        {
+            Console.WriteLine("Type number of offece you need to go we have only 3 office");
+            int numberOfOffice = Int32.Parse(Console.ReadLine());
+            switch (numberOfOffice)
+            {
+                case 1:
+                    Console.WriteLine($" Workdays office {numberOfOffice} works {weekName.Tuesday | weekName.Wednesday | weekName.Saturday}");
+                    break;
+                case 2:
+                    Console.WriteLine($"{numberOfOffice} works {weekName.Sunday | weekName.Wednesday | weekName.Saturday | weekName.Friday}");
+                    break;
+                case 3:
+                    Console.WriteLine($"{numberOfOffice} works {weekName.Saturday | weekName.Friday | weekName.Saturday}");
+                    break;
+                default:
+                    Console.WriteLine($"In our department we have not {numberOfOffice} office");
+                    break;
+            }
+            Console.ReadLine();
+        }
+        public enum weekName
+        {
+            Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
         }
     }
 }
