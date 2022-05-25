@@ -18,7 +18,8 @@ namespace Lesson3
                 Console.WriteLine("2- Task2");
                 Console.WriteLine("3- Task3");
                 Console.WriteLine("4- Task4");
-                Console.WriteLine("Type task number!!! ");
+                Console.WriteLine("Type task number!!!");
+                Console.WriteLine("_________________________________________________________\n");
 
                 int numberOfTask = Int32.Parse(Console.ReadLine());
 
@@ -96,6 +97,7 @@ namespace Lesson3
         }
         static void strinngBackRead()
         {
+            Console.WriteLine("Please type any text");
 
             string anyText = Console.ReadLine().ToString();
             for (int i = anyText.Length - 1; i >= 0; i--)
@@ -112,7 +114,14 @@ namespace Lesson3
                 for (int j = 0; j < 10; j++)
                 {
                     matrix[i, j] = random.Next(0, 2);
-                    Console.Write($"{matrix[i, j]} \t");
+                    if (matrix[i, j] == 1)
+                    {
+                        Console.Write("X\t");
+                    }
+                    else
+                    {
+                        Console.Write($"{matrix[i, j]} \t");
+                    }   
                 }
                 Console.WriteLine();
             }
