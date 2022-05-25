@@ -67,10 +67,13 @@ namespace Lesson3
             {
                 for (int j = 0; j < b; j++)
                 {
-                    int d = matrix[i, j];
                     if (i == j)
                     {
-                        Console.Write($"{d} \t");
+                        Console.Write($"{matrix[i, j]} \t");
+                    }
+                    else
+                    {
+                        Console.Write("\t");
                     }
                 }
                 Console.WriteLine();
@@ -93,6 +96,7 @@ namespace Lesson3
         }
         static void strinngBackRead()
         {
+
             string anyText = Console.ReadLine().ToString();
             for (int i = anyText.Length - 1; i >= 0; i--)
             {
